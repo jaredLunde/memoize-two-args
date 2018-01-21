@@ -1,6 +1,6 @@
 {
   "name": "memoize-two-args",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Memoizes precisely two-argument functions",
   "main": "commonjs/index.js",
   "module": "es/index.js",
