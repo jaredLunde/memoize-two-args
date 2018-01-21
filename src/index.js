@@ -1,16 +1,9 @@
 function Cache (mapConstructor) {
-  const cache = new mapConstructor()
-
+  const cache = mapConstructor === void 0 ? new WeakMap() : new mapConstructor()
 
   function get (arg1, arg2) {
     const base = cache.get(arg1)
-
-    if (base === void 0) {
-      return base
-    }
-    else {
-      return base.get(arg2)
-    }
+    return base === void 0 ? base : base.get(arg2)
   }
 
   function set (arg1, arg2, value) {
@@ -32,16 +25,11 @@ function Cache (mapConstructor) {
 }
 
 
-export default function memoize (fn, mapConstructor = WeakMap) {
+export default function memoize (fn, mapConstructor) {
   const cache = Cache(mapConstructor)
 
   return function (arg1, arg2) {
-    let item = cache.get(arg1, arg2)
-
-    if (item === void 0) {
-      return cache.set(arg1, arg2, fn(arg1, arg2))
-    }
-
-    return item
+    const item = cache.get(arg1, arg2)
+    return item === void 0 ? cache.set(arg1, arg2, fn(arg1, arg2)) : item
   }
 }
