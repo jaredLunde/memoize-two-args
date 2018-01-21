@@ -6,18 +6,16 @@
         "@babel/stage-0"
       ],
       "plugins": [
-        "@babel/transform-runtime",
-        "closure-elimination"
+        "@babel/transform-runtime"
       ]
     },
     "es": {
       "presets": [
         ["@babel/env", {"modules": false}],
-        "@babel/stage-2"
+        "@babel/stage-0"
       ],
       "plugins": [
-        "@babel/transform-runtime",
-        "closure-elimination"
+        "@babel/transform-runtime"
       ]
     }
   }

@@ -25,9 +25,6 @@ const basePlugins = [
       ['@babel/env', {modules: false}],
       '@babel/stage-0'
     ],
-    plugins: [
-      'closure-elimination'
-    ],
     babelrc: false
   }),
 ]

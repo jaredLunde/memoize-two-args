@@ -1,5 +1,9 @@
 function Cache (mapConstructor) {
-  const cache = mapConstructor === void 0 ? new WeakMap() : new mapConstructor()
+  if (mapConstructor === void 0) {
+    mapConstructor = WeakMap
+  }
+
+  const cache = new mapConstructor()
 
   function get (arg1, arg2) {
     const base = cache.get(arg1)
