@@ -2,20 +2,34 @@
   "env": {
     "commonjs": {
       "presets": [
-        "@babel/env",
-        "@babel/stage-0"
+        ["@babel/env", {"useBuiltIns": "usage", "loose": true}]
       ],
       "plugins": [
-        "@babel/transform-runtime"
+        "@babel/transform-runtime",
+        "@babel/proposal-export-default-from",
+        "@babel/proposal-export-namespace-from",
+        "@babel/proposal-logical-assignment-operators",
+        "@babel/proposal-nullish-coalescing-operator",
+        "@babel/proposal-optional-chaining",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-syntax-import-meta",
+        "@babel/plugin-proposal-object-rest-spread"
       ]
     },
     "es": {
       "presets": [
-        ["@babel/env", {"modules": false}],
-        "@babel/stage-0"
+        ["@babel/env", {"useBuiltIns": "usage", "modules": false, "loose": true}]
       ],
       "plugins": [
-        "@babel/transform-runtime"
+        "@babel/transform-runtime",
+        "@babel/proposal-export-default-from",
+        "@babel/proposal-export-namespace-from",
+        "@babel/proposal-logical-assignment-operators",
+        "@babel/proposal-nullish-coalescing-operator",
+        "@babel/proposal-optional-chaining",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-syntax-import-meta",
+        "@babel/plugin-proposal-object-rest-spread"
       ]
     }
   }
