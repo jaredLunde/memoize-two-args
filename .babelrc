@@ -2,10 +2,9 @@
   "env": {
     "commonjs": {
       "presets": [
-        ["@babel/env", {"useBuiltIns": "usage", "loose": true}]
+        ["@babel/env", {"loose": true}]
       ],
       "plugins": [
-        "@babel/transform-runtime",
         "@babel/proposal-export-default-from",
         "@babel/proposal-export-namespace-from",
         "@babel/proposal-logical-assignment-operators",
@@ -18,10 +17,9 @@
     },
     "es": {
       "presets": [
-        ["@babel/env", {"useBuiltIns": "usage", "modules": false, "loose": true}]
+        ["@babel/env", {"modules": false, "loose": true}]
       ],
       "plugins": [
-        "@babel/transform-runtime",
         "@babel/proposal-export-default-from",
         "@babel/proposal-export-namespace-from",
         "@babel/proposal-logical-assignment-operators",
